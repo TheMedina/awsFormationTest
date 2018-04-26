@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A test template
+Metadata:
+  Instances:
+    Description: "Information about the instances"
+  Databases: 
+    Description: "Information about the databases"
+Parameters: 
+  EnvType: 
+    Description: Environment type.
+    Default: test
+    Type: String
+    AllowedValues: 
+      - prod
+      - test
+    ConstraintDescription: must specify prod or test.
+Conditions: 
+  CreateProdResources: !Equals [ !Ref EnvType, prod 
