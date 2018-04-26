@@ -15,4 +15,4 @@ Parameters:
       - test
     ConstraintDescription: must specify prod or test.
 Conditions: 
-  CreateProdResources: !Equals [ !Ref EnvType, prod 
+  CreateProdResources: !Equals [ !Ref EnvType, prod ]
